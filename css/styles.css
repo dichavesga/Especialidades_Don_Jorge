@@ -154,6 +154,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   display: block;
   font-family: var(--font-mono);
   font-weight: 500;
+  font-style: italic;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -585,6 +586,91 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: rgba(247,241,228,0.55);
+}
+
+/* =========================================================
+   CATÁLOGO (catalogo.html)
+   ========================================================= */
+.catalog-hero {
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: var(--space-lg) 0;
+}
+.catalog-hero .eyebrow { color: var(--gold-light); }
+.catalog-hero h1 { color: var(--cream); max-width: 20ch; }
+.catalog-hero .lead { color: rgba(247,247,247,0.8); max-width: 56ch; margin: 0; font-size: 1.05rem; }
+
+.catalog-section { padding: var(--space-lg) 0 var(--space-xl); background: var(--white); }
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-sm);
+}
+.filter-chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--charcoal-soft);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.filter-chip:hover { border-color: var(--wine); color: var(--wine); }
+.filter-chip.active { background: var(--wine); color: var(--cream); border-color: var(--wine); }
+
+.catalog-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--charcoal-soft);
+  margin: 0 0 var(--space-md);
+}
+
+.catalog-grid .product-card-body .eyebrow { display: block; margin-bottom: 0.3rem; font-size: 0.68rem; color: var(--wine); }
+
+.catalog-cta { background: var(--paper); padding: var(--space-lg) 0; }
+.catalog-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.catalog-cta-inner h2 { margin: 0; }
+.catalog-cta-inner .eyebrow { color: var(--wine); }
+
+/* =========================================================
+   WHATSAPP FLOTANTE
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1200;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float svg { width: 30px; height: 30px; color: var(--white); }
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.32);
+  background: #1EBE5A;
+}
+@media (min-width: 700px) {
+  .whatsapp-float { right: 32px; bottom: 32px; width: 64px; height: 64px; }
+  .whatsapp-float svg { width: 34px; height: 34px; }
 }
 
 /* Utilidad accesibilidad */

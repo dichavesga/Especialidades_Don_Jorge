@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubicación | Especialidades Don Jorge</title>
+<meta name="description" content="Encuentre Especialidades Don Jorge en Santa Gertrudis Sur, Grecia, Alajuela. Vea la ruta más cercana desde su ubicación actual.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="img/logo/logo.jpeg" alt="Especialidades Don Jorge">
+      <span class="brand-text">Don Jorge<span>Sabor de origen</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="ubicacion.html" class="active">Ubicación</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="acerca.html">Acerca del sitio</a>
+      <div class="nav-cta">
+        <a href="https://wa.me/50689311228" class="btn btn-outline on-dark" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container-narrow">
+    <span class="eyebrow">Cómo llegar</span>
+    <h1>Estamos en Santa Gertrudis Sur, Grecia</h1>
+    <p class="lead">Ubíquenos en el mapa y trace la ruta más cercana desde donde se encuentre en este momento.</p>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container-narrow">
+    <div class="map-actions">
+      <button type="button" class="btn btn-primary" id="btnUbicarme">Usar mi ubicación y trazar ruta</button>
+      <a class="btn btn-outline" href="https://waze.com/ul/hd1u163gec" target="_blank" rel="noopener">Abrir en Waze</a>
+      <span class="media-status" id="geoEstado">Presione el botón para calcular la ruta.</span>
+    </div>
+
+    <div id="map" class="map-canvas" role="application" aria-label="Mapa de ubicación"></div>
+
+    <div class="route-info" id="rutaInfo" hidden>
+      <div class="route-item">
+        <span class="eyebrow">Distancia</span>
+        <strong id="rutaDistancia">—</strong>
+      </div>
+      <div class="route-item">
+        <span class="eyebrow">Tiempo estimado</span>
+        <strong id="rutaTiempo">—</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== API REST EXTERNO (clima) ===================== -->
+<section class="weather-section">
+  <div class="container-narrow">
+    <span class="eyebrow">Antes de venir</span>
+    <h2>El clima hoy en Grecia</h2>
+    <p class="media-intro">Consultamos en tiempo real el pronóstico de la zona para que planifique su visita.</p>
+
+    <div class="weather-card" id="climaCard">
+      <p class="eyebrow" id="climaEstado">Consultando el clima…</p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container-narrow info-grid">
+    <article class="info-card">
+      <span class="eyebrow">Dirección</span>
+      <h3>Santa Gertrudis Sur</h3>
+      <p>Distrito San José, cantón de Grecia, provincia de Alajuela, Costa Rica.</p>
+    </article>
+    <article class="info-card">
+      <span class="eyebrow">Teléfono / WhatsApp</span>
+      <h3>8931-1228</h3>
+      <p><a href="https://wa.me/50689311228" target="_blank" rel="noopener">Escribirnos por WhatsApp</a></p>
+    </article>
+    <article class="info-card">
+      <span class="eyebrow">Correo</span>
+      <h3>Escríbanos</h3>
+      <p><a href="mailto:especialidadespalermo@gmail.com">especialidadespalermo@gmail.com</a></p>
+    </article>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand-text">Especialidades Don Jorge</span>
+      <p>Embutidos artesanales con recetas de origen familiar, elaborados desde 2020 en Santa Gertrudis Sur, Grecia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:+50689311228">8931-1228</a>
+      <a href="mailto:especialidadespalermo@gmail.com">especialidadespalermo@gmail.com</a>
+      <a href="ubicacion.html">Santa Gertrudis Sur, Grecia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Especialidades Don Jorge — Todos los derechos reservados</span>
+    <a href="acerca.html">Acerca del sitio</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/50689311228" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67C8.68 2.67 2.71 8.64 2.71 16c0 2.5.68 4.83 1.87 6.84L2.67 29.3l6.62-1.86a13.24 13.24 0 0 0 6.75 1.85h.01c7.36 0 13.33-5.97 13.33-13.33 0-3.56-1.39-6.91-3.9-9.42a13.24 13.24 0 0 0-9.44-3.87zm0 24.4h-.01a11.06 11.06 0 0 1-5.64-1.55l-.4-.24-4.19 1.18 1.12-4.09-.26-.42A11.03 11.03 0 0 1 4.9 16c0-6.14 5-11.13 11.15-11.13 2.98 0 5.77 1.16 7.88 3.27a11.06 11.06 0 0 1 3.26 7.87c0 6.14-5 11.13-11.15 11.13zm6.1-8.33c-.33-.17-1.98-.98-2.29-1.09-.31-.11-.53-.17-.76.17-.22.33-.87 1.09-1.07 1.32-.2.22-.39.25-.72.08-.33-.17-1.4-.51-2.67-1.64-.99-.88-1.65-1.97-1.85-2.3-.19-.33-.02-.5.15-.67.15-.15.33-.39.5-.58.16-.2.22-.33.33-.55.11-.22.06-.42-.03-.58-.08-.17-.76-1.82-1.04-2.5-.27-.65-.55-.56-.76-.57l-.65-.01c-.22 0-.58.08-.88.42-.3.33-1.16 1.13-1.16 2.76s1.19 3.2 1.35 3.42c.17.22 2.34 3.58 5.68 5.02.79.34 1.41.55 1.89.7.79.25 1.51.22 2.08.13.63-.1 1.98-.81 2.26-1.59.28-.78.28-1.45.2-1.59-.08-.14-.3-.22-.63-.39z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ubicacion.js"></script>
+
+<!-- Google Maps JavaScript API (Maps Demo Key) -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6DUK78eDcsYRKTfqXXCHrMwqOIGLhE2M&callback=initMap&libraries=geometry">
+</script>
+</body>
+</html>

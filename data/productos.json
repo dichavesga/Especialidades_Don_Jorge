@@ -4,71 +4,118 @@
     "nombre": "Mortadela Especial",
     "categoria": "Embutidos cocidos",
     "descripcion": "Nuestra mortadela insignia, elaborada con la receta original de la casa.",
-    "presentaciones": ["Pieza", "5 Kg", "1 Kg", "1/2 Kg"],
-    "destacado": true
+    "presentaciones": [
+      "Pieza",
+      "5 Kg",
+      "1 Kg",
+      "1/2 Kg"
+    ],
+    "destacado": true,
+    "imagen": "img/productos/mortadela.jpg",
+    "alt": "Mortadela Especial — Especialidades Don Jorge"
   },
   {
     "id": 2,
     "nombre": "Jamón de Pechuga",
     "categoria": "Embutidos cocidos",
     "descripcion": "Jamón elaborado a base de pechuga, suave y jugoso.",
-    "presentaciones": ["Pieza", "1/2 Kg"],
-    "destacado": true
+    "presentaciones": [
+      "Pieza",
+      "1/2 Kg"
+    ],
+    "destacado": true,
+    "imagen": "img/productos/jamon-pechuga.jpg",
+    "alt": "Jamón de Pechuga — Especialidades Don Jorge"
   },
   {
     "id": 3,
     "nombre": "Tocineta Formada",
     "categoria": "Tocinetas",
     "descripcion": "Tocineta formada, ideal para el desayuno de cada día.",
-    "presentaciones": ["1 Kg", "1/2 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "1 Kg",
+      "1/2 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/tocineta-formada.jpg",
+    "alt": "Tocineta Formada — Especialidades Don Jorge"
   },
   {
     "id": 4,
     "nombre": "Tocineta Original",
     "categoria": "Tocinetas",
     "descripcion": "Tocineta tradicional, con el sabor ahumado de siempre.",
-    "presentaciones": ["1 Kg", "1/2 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "1 Kg",
+      "1/2 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/tocineta-original.jpg",
+    "alt": "Tocineta Original — Especialidades Don Jorge"
   },
   {
     "id": 5,
     "nombre": "Salchichón Parrillero / con Chile",
     "categoria": "Salchichones",
     "descripcion": "Perfecto para la parrilla, disponible con un toque picante.",
-    "presentaciones": ["5 Kg", "1 Kg"],
-    "destacado": true
+    "presentaciones": [
+      "5 Kg",
+      "1 Kg"
+    ],
+    "destacado": true,
+    "imagen": "img/productos/salchichon.jpg",
+    "alt": "Salchichón Parrillero / con Chile — Especialidades Don Jorge"
   },
   {
     "id": 6,
     "nombre": "Chorizo Mexicano",
     "categoria": "Chorizos",
     "descripcion": "Chorizo con sazón mexicana, intenso y lleno de sabor.",
-    "presentaciones": ["Pieza", "1 Kg", "1/2 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "Pieza",
+      "1 Kg",
+      "1/2 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/chorizo-mexicano.jpg",
+    "alt": "Chorizo Mexicano — Especialidades Don Jorge"
   },
   {
     "id": 7,
     "nombre": "Chorizo Especial",
     "categoria": "Chorizos",
     "descripcion": "La receta especial de la casa, con la sazón de origen.",
-    "presentaciones": ["Pieza", "1 Kg", "1/2 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "Pieza",
+      "1 Kg",
+      "1/2 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/chorizo-especial.jpg",
+    "alt": "Chorizo Especial — Especialidades Don Jorge"
   },
   {
     "id": 8,
     "nombre": "Chorizo Fresco Tipo Argentino",
     "categoria": "Chorizos",
     "descripcion": "Chorizo fresco al estilo argentino, ideal para asar.",
-    "presentaciones": ["1/2 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "1/2 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/chorizo-argentino.jpg",
+    "alt": "Chorizo Fresco Tipo Argentino — Especialidades Don Jorge"
   },
   {
     "id": 9,
     "nombre": "Carne Molida Precocida",
     "categoria": "Otros",
     "descripcion": "Carne molida ya precocida, lista para ahorrar tiempo en la cocina.",
-    "presentaciones": ["1 Kg"],
-    "destacado": false
+    "presentaciones": [
+      "1 Kg"
+    ],
+    "destacado": false,
+    "imagen": "img/productos/carne-molida.jpg",
+    "alt": "Carne Molida Precocida — Especialidades Don Jorge"
   }
 ]

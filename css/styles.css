@@ -1136,3 +1136,30 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
 .catalog-grid .product-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,0.16); }
 .catalog-grid .product-card:hover .product-media img { transform: scale(1.05); }
 .catalog-grid .product-card:hover .zoom-hint { opacity: 1; transform: translateY(0); }
+
+
+/* =========================================================
+   FOTOGRAFÍA DEL NEGOCIO (secciones de historia)
+   ========================================================= */
+.story-photo {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--paper);
+}
+.story-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.story-photo figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--charcoal-soft);
+  padding: 0.7rem 0.9rem;
+  background: var(--white);
+  border-top: 3px solid var(--gold);
+}

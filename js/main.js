@@ -33,3 +33,38 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// ============================================================
+// Pestañas del catálogo (Productos / Video y audio)
+// JavaScript propio, sin componentes de terceros.
+// ============================================================
+document.addEventListener('DOMContentLoaded', function () {
+  const botones = document.querySelectorAll('.tab-btn');
+  const paneles = document.querySelectorAll('.tab-panel');
+  if (!botones.length) return;
+
+  function activar(nombre) {
+    botones.forEach(function (b) {
+      const activo = b.dataset.tab === nombre;
+      b.classList.toggle('active', activo);
+      b.setAttribute('aria-selected', activo ? 'true' : 'false');
+    });
+    paneles.forEach(function (p) {
+      p.classList.toggle('active', p.id === 'panel-' + nombre);
+    });
+    // Guarda la pestaña en la URL para poder enlazarla directamente
+    history.replaceState(null, '', '#' + nombre);
+  }
+
+  botones.forEach(function (b) {
+    b.addEventListener('click', function () {
+      activar(this.dataset.tab);
+    });
+  });
+
+  // Si la URL trae un hash válido, abre esa pestaña al cargar
+  const hash = window.location.hash.replace('#', '');
+  if (hash && document.getElementById('panel-' + hash)) {
+    activar(hash);
+  }
+});

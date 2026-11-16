@@ -11,7 +11,7 @@
       "1/2 Kg"
     ],
     "destacado": true,
-    "imagen": "img/productos/mortadela.jpg",
+    "imagen": "img/productos/mortadela.png",
     "alt": "Mortadela Especial — Especialidades Don Jorge"
   },
   {
@@ -24,7 +24,7 @@
       "1/2 Kg"
     ],
     "destacado": true,
-    "imagen": "img/productos/jamon-pechuga.jpg",
+    "imagen": "img/productos/jamon-pechuga.png",
     "alt": "Jamón de Pechuga — Especialidades Don Jorge"
   },
   {
@@ -37,7 +37,7 @@
       "1/2 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/tocineta-formada.jpg",
+    "imagen": "img/productos/tocineta-formada.png",
     "alt": "Tocineta Formada — Especialidades Don Jorge"
   },
   {
@@ -50,7 +50,7 @@
       "1/2 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/tocineta-original.jpg",
+    "imagen": "img/productos/tocineta-original.png",
     "alt": "Tocineta Original — Especialidades Don Jorge"
   },
   {
@@ -63,7 +63,7 @@
       "1 Kg"
     ],
     "destacado": true,
-    "imagen": "img/productos/salchichon.jpg",
+    "imagen": "img/productos/salchichon.png",
     "alt": "Salchichón Parrillero / con Chile — Especialidades Don Jorge"
   },
   {
@@ -77,7 +77,7 @@
       "1/2 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/chorizo-mexicano.jpg",
+    "imagen": "img/productos/chorizo-mexicano.png",
     "alt": "Chorizo Mexicano — Especialidades Don Jorge"
   },
   {
@@ -91,7 +91,7 @@
       "1/2 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/chorizo-especial.jpg",
+    "imagen": "img/productos/chorizo-especial.png",
     "alt": "Chorizo Especial — Especialidades Don Jorge"
   },
   {
@@ -103,7 +103,7 @@
       "1/2 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/chorizo-argentino.jpg",
+    "imagen": "img/productos/chorizo-argentino.png",
     "alt": "Chorizo Fresco Tipo Argentino — Especialidades Don Jorge"
   },
   {
@@ -115,7 +115,7 @@
       "1 Kg"
     ],
     "destacado": false,
-    "imagen": "img/productos/carne-molida.jpg",
+    "imagen": "img/productos/carne-molida.png",
     "alt": "Carne Molida Precocida — Especialidades Don Jorge"
   }
 ]

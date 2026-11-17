@@ -72,7 +72,7 @@
   },
   {
     "id": 6,
-    "nombre": "Salame",
+    "nombre": "Chorizo Mexicano: Salame",
     "categoria": "Chorizos",
     "descripcion": "Chorizo con sazón mexicana, intenso y lleno de sabor.",
     "presentaciones": [
@@ -86,7 +86,7 @@
   },
   {
     "id": 7,
-    "nombre": "Peperone",
+    "nombre": "Chorizo especial: Peperone",
     "categoria": "Chorizos",
     "descripcion": "La receta especial de la casa, con la sazón de origen.",
     "presentaciones": [

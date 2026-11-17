@@ -3,6 +3,7 @@
 // simulando un API Rest interno, y construcción dinámica del DOM.
 // Incluye la galería de imágenes integrada: cada tarjeta muestra la
 // fotografía del producto y al hacer clic se amplía en un lightbox.
+// Los productos con "imagenes" (2 o más) muestran un slider.
 // Usa jQuery para todas las operaciones sobre el DOM.
 // ============================================================
 
@@ -25,13 +26,37 @@ $(function () {
       <path d="M6 12c0 2 2.7 3.5 6 3.5s6-1.5 6-3.5"/>
     </svg>`;
 
+  // NUEVO: genera la imagen simple o el slider según el producto
+  function buildImagen(producto) {
+    if (producto.imagenes && producto.imagenes.length > 1) {
+      const imgs = producto.imagenes.map(function (src) {
+        return `<img src="${src}" alt="${producto.alt}" loading="lazy"
+                     onerror="this.classList.add('img-missing');">`;
+      }).join('');
+      const dots = producto.imagenes.map(function (_, i) {
+        return `<span class="${i === 0 ? 'active' : ''}"></span>`;
+      }).join('');
+
+      return `
+        <div class="slider" data-index="0">
+          <div class="slider-pista">${imgs}</div>
+          <button class="slider-btn prev" type="button" aria-label="Imagen anterior">&#10094;</button>
+          <button class="slider-btn next" type="button" aria-label="Imagen siguiente">&#10095;</button>
+          <div class="slider-dots">${dots}</div>
+        </div>`;
+    }
+
+    return `
+      <img src="${producto.imagen}" alt="${producto.alt}" loading="lazy"
+           onerror="this.classList.add('img-missing');">`;
+  }
+
   function buildCard(producto, indice) {
     const presentaciones = producto.presentaciones.join(' · ');
     return `
       <article class="product-card" data-categoria="${producto.categoria}" data-index="${indice}">
         <div class="product-media">
-          <img src="${producto.imagen}" alt="${producto.alt}" loading="lazy"
-               onerror="this.classList.add('img-missing');">
+          ${buildImagen(producto)}
           <div class="product-fallback">
             ${sliceIcon}
             <span>Foto pendiente</span>
@@ -118,6 +143,22 @@ $(function () {
     });
   }
 
+  // ---------- NUEVO: flechas del slider (home y catálogo) ----------
+  // Va ANTES del clic de la tarjeta para poder detenerlo.
+  $featured.add($fullGrid).on('click', '.slider-btn', function (e) {
+    e.stopPropagation();  // evita que se abra el lightbox al usar las flechas
+
+    const $slider = $(this).closest('.slider');
+    const total = $slider.find('.slider-pista img').length;
+    let i = parseInt($slider.attr('data-index'), 10);
+
+    i = $(this).hasClass('next') ? (i + 1) % total : (i - 1 + total) % total;
+
+    $slider.attr('data-index', i);
+    $slider.find('.slider-pista').css('transform', 'translateX(-' + (i * 100) + '%)');
+    $slider.find('.slider-dots span').removeClass('active').eq(i).addClass('active');
+  });
+
   // ---------- Lightbox: galería de imágenes integrada ----------
   const $lightbox = $('#lightbox');
   if (!$lightbox.length) return;
@@ -127,13 +168,19 @@ $(function () {
 
   $fullGrid.on('click', '.product-card', function () {
     indiceActual = parseInt($(this).data('index'), 10);
-    abrirLightbox(indiceActual);
+    // NUEVO: si hay slider, se amplía la imagen que se está viendo
+    const $slider = $(this).find('.slider');
+    const imgIndex = $slider.length ? parseInt($slider.attr('data-index'), 10) : 0;
+    abrirLightbox(indiceActual, imgIndex);
   });
 
-  function abrirLightbox(i) {
+  function abrirLightbox(i, imgIndex) {
     const producto = visibles[i];
     if (!producto) return;
-    $lbMedia.html('<img src="' + producto.imagen + '" alt="' + producto.alt + '">');
+    const src = (producto.imagenes && producto.imagenes.length > 1)
+      ? producto.imagenes[imgIndex || 0]
+      : producto.imagen;
+    $lbMedia.html('<img src="' + src + '" alt="' + producto.alt + '">');
     $lbCaption.text(producto.nombre + ' — ' + producto.presentaciones.join(' · '));
     $lightbox.addClass('open');
     $('body').css('overflow', 'hidden');

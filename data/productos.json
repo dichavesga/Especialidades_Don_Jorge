@@ -64,11 +64,15 @@
     ],
     "destacado": true,
     "imagen": "img/productos/salchichon.png",
+    "imagenes": [
+      "img/productos/salchichon.png",
+      "img/productos/salchichon-2.png"
+    ],
     "alt": "Salchichón Parrillero / con Chile — Especialidades Don Jorge"
   },
   {
     "id": 6,
-    "nombre": "Chorizo Mexicano",
+    "nombre": "Salame",
     "categoria": "Chorizos",
     "descripcion": "Chorizo con sazón mexicana, intenso y lleno de sabor.",
     "presentaciones": [
@@ -78,11 +82,11 @@
     ],
     "destacado": false,
     "imagen": "img/productos/chorizo-mexicano.png",
-    "alt": "Chorizo Mexicano — Especialidades Don Jorge"
+    "alt": "Salame — Especialidades Don Jorge"
   },
   {
     "id": 7,
-    "nombre": "Chorizo Especial",
+    "nombre": "Peperone",
     "categoria": "Chorizos",
     "descripcion": "La receta especial de la casa, con la sazón de origen.",
     "presentaciones": [
@@ -92,7 +96,7 @@
     ],
     "destacado": false,
     "imagen": "img/productos/chorizo-especial.png",
-    "alt": "Chorizo Especial — Especialidades Don Jorge"
+    "alt": "Peperone — Especialidades Don Jorge"
   },
   {
     "id": 8,
@@ -108,7 +112,7 @@
   },
   {
     "id": 9,
-    "nombre": "Carne Molida Precocida",
+    "nombre": "Carne Molida para Pizza o al gusto",
     "categoria": "Otros",
     "descripcion": "Carne molida ya precocida, lista para ahorrar tiempo en la cocina.",
     "presentaciones": [
@@ -116,6 +120,6 @@
     ],
     "destacado": false,
     "imagen": "img/productos/carne-molida.png",
-    "alt": "Carne Molida Precocida — Especialidades Don Jorge"
+    "alt": "Carne Molida para Pizza o al gusto — Especialidades Don Jorge"
   }
 ]
